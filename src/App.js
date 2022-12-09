@@ -9,14 +9,12 @@ class App extends Component {
           bootstrapURLKeys={{ key: "AIzaSyAszKz1twEqqLHxPKh5g_qFJ7RSRyo_Ag8" }}
           defaultCenter={{
             lat: -34.55884338552234,
-            lng: -58.41211645073693
+            lng: -58.41211645073693,
           }}
           defaultZoom={17}
           options={{
             disableDefaultUI: true,
-            draggable: false,
-            keyboardShortcuts: false,
-            mapTypeId: "satellite"
+            mapTypeId: "satellite",
           }}
         ></GoogleMapReact>
       </div>
