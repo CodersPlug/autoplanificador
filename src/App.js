@@ -14,8 +14,6 @@ class App extends Component {
           defaultZoom={17}
           options={{
             disableDefaultUI: true,
-            draggable: false,
-            keyboardShortcuts: false,
             mapTypeId: "satellite"
           }}
         ></GoogleMapReact>
