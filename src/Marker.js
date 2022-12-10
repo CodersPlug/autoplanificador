@@ -6,37 +6,45 @@ TODO:
 */
 import Badge from "@mui/material/Badge";
 import Avatar from "@mui/material/Avatar";
+import Tooltip from "@mui/material/Tooltip";
+import Zoom from "@mui/material/Zoom";
+import { lightGreen } from "@mui/material/colors";
 
-const Marker = ({ operador, estado }) => {
+const Marker = ({ operadorID, operadorNombre, unidad, estado, litros }) => {
   const url =
-    "https://faces-img.xcdn.link/image-lorem-face-" + operador + ".jpg";
+    "https://faces-img.xcdn.link/image-lorem-face-" + operadorID + ".jpg";
+  const tip = unidad + " | " + operadorNombre + " | " + estado;
+  const color = estado === "Disponible" ? "lightGreen" : "yellow";
 
   return (
-    <Badge
-      sx={{
-        "& .MuiBadge-badge": {
-          backgroundColor: estado,
-          width: 50,
-          height: 20
-        }
-      }}
-      overlap="circular"
-      badgeContent="19.200"
-      anchorOrigin={{
-        vertical: "bottom",
-        horizontal: "right"
-      }}
-    >
-      <Avatar
-        src={url}
+    <Tooltip title={tip} TransitionComponent={Zoom} arrow placement="top">
+      <Badge
         sx={{
-          width: 80,
-          height: 80,
-          borderStyle: "solid",
-          borderWidth: "2px"
+          "& .MuiBadge-badge": {
+            backgroundColor: color,
+            width: 60,
+            height: 20
+          }
         }}
-      />
-    </Badge>
+        overlap="circular"
+        badgeContent={litros}
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "right"
+        }}
+      >
+        <Avatar
+          src={url}
+          sx={{
+            width: 80,
+            height: 80,
+            borderStyle: "solid",
+            borderWidth: "3px",
+            borderColor: color
+          }}
+        />
+      </Badge>
+    </Tooltip>
   );
 };
 
