@@ -1,3 +1,10 @@
+/*
+  Agregad códigos de OPERADOR
+  2756
+  4149
+  3730
+*/
+
 import GoogleMapReact from "google-map-react";
 import Marker from "./Marker";
 
@@ -16,10 +23,14 @@ function App() {
           zoomControl: false,
           scrollwheel: false,
           disableDoubleClickZoom: true,
-          mapTypeId: "satellite"
+          draggable: true
         }}
       >
-        <Marker lat="-34.55884338552234" lng="-58.41211645073693"></Marker>
+        <Marker
+          lat="-34.55884338552234"
+          lng="-58.41211645073693"
+          operador="3982"
+        ></Marker>
       </GoogleMapReact>
     </div>
   );

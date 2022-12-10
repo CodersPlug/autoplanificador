@@ -5,8 +5,11 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
-    "@iconify/react": "4.0.1",
+    "@emotion/react": "11.10.5",
+    "@emotion/styled": "11.10.5",
+    "@mui/material": "5.10.17",
     "google-map-react": "2.1.9",
+    "mui": "0.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-scripts": "4.0.0",
