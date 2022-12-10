@@ -30,6 +30,7 @@ function App() {
           lat="-34.55884338552234"
           lng="-58.41211645073693"
           operador="3982"
+          estado="yellow"
         ></Marker>
       </GoogleMapReact>
     </div>
