@@ -8,7 +8,6 @@ import Badge from "@mui/material/Badge";
 import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
 import Zoom from "@mui/material/Zoom";
-import { lightGreen } from "@mui/material/colors";
 
 const Marker = ({ operadorID, operadorNombre, unidad, estado, litros }) => {
   const url =
